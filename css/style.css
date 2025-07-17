@@ -1,0 +1,168 @@
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* base rule */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+html{
+    font-size: 62.5%;
+    /* 100% = 16px */
+    /* 62.5% = 10px */
+    /* 1rem = 10px */
+}
+
+h1,
+h2{
+    font-weight: bold;
+}
+
+h2{
+    font-size: 4.5rem;
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+p{
+    color: var(--dark-03);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+li, a{
+    color: var(--dark-02);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* theme */
+
+:root{
+    --dark-01: #131313;
+    --dark-02: #424242;
+    --dark-03: #727272;
+    --dark-04: #A1A1A1;
+    --dark-05: #D0D0D0;
+    --dark-06: #E7E7E7;
+    --dark-07: #F3F3F3;
+    --white: #FFFFFF;
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #FFF4E7;
+    --btn-primary: #FF900E;
+}
+
+/* layout */
+
+.container{
+    margin: 0 12.5%;
+}
+
+/* module / reusable */
+
+.btn{
+    padding: 2rem 2.5rem;
+    background-color: var(--btn-primary);
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+}
+
+/* state */
+
+/***** header Section *****/ 
+
+.section-header{
+    background-color: var(--bg-secondary);
+    padding: 5rem 0;
+}
+
+/***** navbar Section *****/ 
+
+.section-header--nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-nav--menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu--items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+/***** navbar media query Section *****/ 
+
+/* for mobile */
+@media screen and (max-width: 576px) {
+
+    /* mobile-base-rule */
+    h2{
+        font-size: 4rem;
+    }
+
+    /* state-for-mobile */
+
+    .section-header--nav,
+    .section-nav--menu,
+    .menu--items{
+        flex-direction: column;
+    }
+    
+    
+}
+
+/* for tablet */
+@media screen and (max-width: 992px) {
+    /* state-for-tablet */
+
+    .section-header--nav{
+        flex-direction: column;
+        align-items: center;
+        padding: 2.4rem 0;
+    }
+    
+    
+}
+
+/***** End navbar media query Section *****/
+
+/***** End navbar Section *****/
+
+
+
+
+
+/***** End header Section *****/
